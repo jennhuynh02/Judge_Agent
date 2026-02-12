@@ -1,4 +1,4 @@
-# 🧑‍⚖️ Judge Agent
+# Judge Agent
 
 ## Project Intent
 
@@ -15,7 +15,7 @@ A judge agent that evaluates both text and video content and produces four types
 
 - Origin is modeled as a three-way prediction: `human`, `ai`, or `ai-assisted`. The `ai-assisted` label captures content that was drafted, structured, cleaned up, or templated with AI involvement but carries meaningful human contribution.
 
-- Primary detection uses GPTZero API (via `GPTZERO_API_KEY` from `.env`) for text content classification. For low-confidence results or when distinguishing `ai-assisted` cases, we fall back to GPT-4o for nuanced analysis.
+- Primary detection uses GPTZero API (via `GPTZERO_API_KEY` from `.env`) for text content classification. GPTZero is called via a direct HTTP POST to https://api.gptzero.me/v2/predict/text using requests, which is already a project dependency. No additional SDK required. For low-confidence results or when distinguishing `ai-assisted` cases, we fall back to GPT-4o for nuanced analysis.
 
 **2. Virality: Content-Intrinsic Scoring**
 
@@ -60,11 +60,15 @@ A judge agent that evaluates both text and video content and produces four types
 
   Add a second-pass "challenge" prompt where the model critiques its own output and surfaces low-confidence dimensions explicitly.
 
+- GPTZero SDK Integration
+
+  Replace raw HTTP calls to GPTZero with the official SDK for better error handling, retry logic, and access to the full response schema including sentence-level AI probability scores.
+
 ---
 
 ## Loom Walkthrough
 
-- [ ] to be added...
+- to be added...
 
 ## Instructions for Running App
 
