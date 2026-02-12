@@ -27,19 +27,26 @@ A judge agent that evaluates both text and video content and produces four types
 
 ### Quick Start (No API Keys Required)
 
-1. Install dependencies:
+1. Create and activate a virtual environment:
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+2. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-2. Copy the example env file:
+3. Copy the example env file:
 
    ```bash
    cp .env.example .env
    ```
 
-3. Run in mock mode (default):
+4. Run in mock mode (default):
 
    ```bash
    python main.py
