@@ -22,10 +22,10 @@ A judge agent that evaluates both text and video content and produces four types
 
 ---
 
-<details>
-<summary><strong>Instructions for Running App</strong></summary>
+## Instructions for Running App
 
-### Quick Start (No API Keys Required)
+<details open>
+<summary><strong>Quick Start (No API Keys Required)</strong></summary>
 
 1. Create and activate a virtual environment:
 
@@ -54,7 +54,10 @@ A judge agent that evaluates both text and video content and produces four types
 
    The app runs with `USE_MOCK=true` by default in `.env`, which uses simulated responses so you can test without API keys.
 
-### Running with Real API Keys
+</details>
+
+<details>
+<summary><strong>Running with Real API Keys</strong></summary>
 
 1. Edit `.env`:
 
@@ -73,16 +76,12 @@ A judge agent that evaluates both text and video content and produces four types
    python main.py
    ```
 
-### Usage
-
-Choose option 1 for text analysis or option 2 for video analysis.
-
-### Supported Input Formats
-
-- **Text**: Plain text string or text file content
-- **Video**: Local video files (.mp4, .mov, .avi, etc.)
-
 </details>
+
+- **Usage:** Choose option 1 for text analysis or option 2 for video analysis.
+- **Supported Input Formats:**
+  - **Text**: Plain text string or text file content
+  - **Video**: Local video files (.mp4, .mov, .avi, etc.)
 
 ---
 
