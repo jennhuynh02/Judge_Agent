@@ -72,4 +72,47 @@ A judge agent that evaluates both text and video content and produces four types
 
 ## Instructions for Running App
 
-- to be added...
+### Quick Start (No API Keys Required)
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Copy the example env file:
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Run in mock mode (default):
+   ```bash
+   python main.py
+   ```
+   
+   The app runs with `USE_MOCK=true` by default in `.env`, which uses simulated responses so you can test without API keys.
+
+### Running with Real API Keys
+
+1. Edit `.env`:
+   - Set `USE_MOCK=false`
+   - Replace `GPTZERO_API_KEY` with your GPTZero API key
+   - Replace `OPENAI_API_KEY` with your OpenAI API key
+
+2. (For video support) Install ffmpeg:
+   - macOS: `brew install ffmpeg`
+   - Ubuntu: `sudo apt-get install ffmpeg`
+   - Windows: Download from https://ffmpeg.org/
+
+3. Run the CLI:
+   ```bash
+   python main.py
+   ```
+
+### Usage
+
+Choose option 1 for text analysis or option 2 for video analysis.
+
+### Supported Input Formats
+
+- **Text**: Plain text string or text file content
+- **Video**: Local video files (.mp4, .mov, .avi, etc.)
